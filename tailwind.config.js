@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "nature-light": "url('/src/assets/images/bg.png')",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
