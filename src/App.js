@@ -1,12 +1,19 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
+import Navbar from "./Pages/Home/Shared/Navbar";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-5xl'>Hello world</h1>
-      <button className="btn px-16">Hit Me</button>
-      <button class="btn btn-primary rounded-full w-64">Button</button>
-      <button className="btn btn-accent btn-outline">Hire Me</button>
+    <div>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+      </Routes>
     </div>
   );
 }
