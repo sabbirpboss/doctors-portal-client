@@ -1,10 +1,9 @@
 import React from "react";
 import appointment from "../../../assets/images/appointment.png";
-import MainBtn from "../Shared/MainBtn";
 
 const HomeContact = () => {
   return (
-    <>
+    <section>
       <div
         style={{
           background: `url(${appointment})`,
@@ -84,7 +83,7 @@ const HomeContact = () => {
           </div>
         </div>
       </div> */}
-    </>
+    </section>
   );
 };
 
