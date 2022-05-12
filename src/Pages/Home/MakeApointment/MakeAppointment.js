@@ -14,13 +14,13 @@ const MakeAppointment = () => {
       }}
       className="flex justify-center items-center"
     >
-      <div className="flex-1">
-        <img src={doctor} alt={doctorInfo.doctorName} />
+      <div className="flex-1 hidden lg:block">
+        <img className="mt-[-100px]" src={doctor} alt={doctorInfo.doctorName} />
       </div>
       <div className="flex-1">
         <h3 className="text-xl text-secondary font-bold">Appointment</h3>
-        <h2 className="font-semibold text-4xl text-white my-5">Make an appointment Today</h2>
-        <p className="text-base text-white mb-8">
+        <h2 className="font-semibold text-4xl text-white py-5">Make an appointment Today</h2>
+        <p className="text-base text-white pb-8">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsumis that it has a more-or-less normal distribution of
