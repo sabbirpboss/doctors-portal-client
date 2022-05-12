@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import Navbar from "./Pages/Home/Shared/Navbar";
 import Login from "./Pages/Login/Login";
 import Testimonials from "./Pages/Home/Testimonials/Testimonials";
+import Appointment from "./Pages/Appointment/Appointment";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/review" element={<Testimonials />}></Route>
+        <Route path="/appointment" element={<Appointment />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
