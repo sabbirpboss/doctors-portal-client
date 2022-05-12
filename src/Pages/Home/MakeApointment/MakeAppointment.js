@@ -21,7 +21,7 @@ const MakeAppointment = () => {
             alt={doctorInfo.doctorName}
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 px-8 py-10 lg:px-0 lg:py-0">
           <h3 className="text-xl text-secondary font-bold">Appointment</h3>
           <h2 className="font-semibold text-4xl text-white py-5">
             Make an appointment Today
