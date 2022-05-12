@@ -50,7 +50,7 @@ const Services = () => {
       </div>
       <div className="hero min-h-screen bg-base-100 bg-nature-light py-12">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={treatment} className="max-w-sm rounded-lg shadow-2xl" />
+          <img src={treatment} className="sm:max-w-sm rounded-lg shadow-2xl" />
           <div className="px-12">
             <h1 className="text-5xl font-bold">Exceptional Dental Care, on Your Terms</h1>
             <p className="py-6">

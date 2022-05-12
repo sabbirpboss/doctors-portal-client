@@ -19,22 +19,22 @@ const HomeContact = () => {
         </div>
         <div className="">
           <input
-            className="block w-[450px] h-12 p-3 mx-auto input text-base"
+            className="block sm:w-5/6 lg:w-[450px] xl:w-[450px] 2xl:w-[450px] h-12 p-3 mx-auto input text-base"
             type="email"
             placeholder="Email Address"
             name="email"
           />
           <input
-            className="block w-[450px] h-12 p-3 mx-auto my-4 input text-base"
+            className="block sm:w-5/6 lg:w-[450px] xl:w-[450px] 2xl:w-[450px] h-12 p-3 mx-auto my-4 input text-base"
             type="text"
             placeholder="Subject"
             name="text"
           />
           <textarea
-            className="block w-[450px] p-3 mx-auto textarea text-base"
+            className="block w-[275px] sm:w-3/4 md:w-5/6 lg:w-[450px] xl:w-[450px] 2xl:w-[450px] p-3 mx-auto textarea text-base"
             name="message"
             id=""
-            cols="30"
+            cols="25"
             rows="4"
             placeholder="Your message"
           ></textarea>
