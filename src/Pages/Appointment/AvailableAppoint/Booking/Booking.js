@@ -1,7 +1,7 @@
 import React from "react";
 import MainBtn from "../../../Home/Shared/MainBtn";
 
-const Booking = ({ booking }) => {
+const Booking = ({ booking, setTreatment }) => {
   const { name, slots } = booking;
   return (
     <div>
@@ -44,7 +44,10 @@ const Booking = ({ booking }) => {
           </div>
         </div>
       ) : (
-        <div title="Available. Hit the Button for Booking Now." class="card text-neutral-content shadow-xl">
+        <div
+          title="Available. Hit the Button for Booking Now."
+          class="card text-neutral-content shadow-xl"
+        >
           <div class="card-body items-center text-center">
             <h2 class="card-title text-secondary text-xl font-semibold">
               {name}
@@ -73,7 +76,13 @@ const Booking = ({ booking }) => {
                   Book Appointment
                 </button>
               ) : (
-                <MainBtn>Make Appointment</MainBtn>
+                <label
+                  for="booking-modal"
+                  onClick={() => setTreatment(booking)}
+                  class="btn btn-secondary text-white uppercase modal-button"
+                >
+                  Make Appointment
+                </label>
               )}
             </div>
           </div>
