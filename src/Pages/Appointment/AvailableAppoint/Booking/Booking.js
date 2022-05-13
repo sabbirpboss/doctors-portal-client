@@ -7,12 +7,32 @@ const Booking = ({ booking }) => {
     <div class="card text-neutral-content shadow-xl">
       <div class="card-body items-center text-center">
         <h2 class="card-title text-secondary text-xl font-semibold">{name}</h2>
-        <p className="uppercase text-black text-xs">
+        <p className="uppercase text-sm font-light text-black">
+          {slots.length > 0 ? (
+            <span title="Available. Hit the Button for Booking Now">
+              {slots[0]}
+            </span>
+          ) : (
+            <span
+              title="Please Don't Worry. Try Again Later."
+              className="text-red-500"
+            >
+              Alas ! Time Booked
+            </span>
+          )}
+        </p>
+        <p className="uppercase text-black text-xs font-light">
           {slots.length < 10 ? 0 : 0}
           {slots.length} {slots.length > 1 ? "Spaces" : "Space"} Available
         </p>
         <div class="card-actions justify-end">
-          <MainBtn>Book Appointment</MainBtn>
+            {
+            slots.length === 0
+            ?
+            <button disabled className="btn bg-base-200">Book Appointment</button>
+            :
+            <MainBtn>Make Appointment</MainBtn>
+            }
         </div>
       </div>
     </div>
