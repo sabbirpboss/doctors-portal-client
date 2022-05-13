@@ -16,7 +16,7 @@ const Booking = ({ booking }) => {
             </h2>
             <p className="uppercase text-sm font-light text-black">
               {slots.length > 0 ? (
-                <span title="Available. Hit the Button for Booking Now">
+                <span title="Available. Hit the Button for Booking Now.">
                   {slots[0]}
                 </span>
               ) : (
@@ -44,14 +44,14 @@ const Booking = ({ booking }) => {
           </div>
         </div>
       ) : (
-        <div class="card text-neutral-content shadow-xl">
+        <div title="Available. Hit the Button for Booking Now." class="card text-neutral-content shadow-xl">
           <div class="card-body items-center text-center">
             <h2 class="card-title text-secondary text-xl font-semibold">
               {name}
             </h2>
             <p className="uppercase text-sm font-light text-black">
               {slots.length > 0 ? (
-                <span title="Available. Hit the Button for Booking Now">
+                <span title="Available. Hit the Button for Booking Now.">
                   {slots[0]}
                 </span>
               ) : (
