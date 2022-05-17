@@ -12,7 +12,7 @@ const HomeContact = () => {
       >
         <div className="text-center">
           <h4 className="text-secondary text-xl font-bold">Contact Us</h4>
-          <h2 className="text-3xl text-white font-light mb-8 mt-1">
+          <h2 className="text-3xl text-white font-normal mb-8 mt-1">
             Stay connected with us
           </h2>
         </div>
@@ -56,7 +56,7 @@ const HomeContact = () => {
       >
         <div className="text-center pb-14 text-white">
           <p className="text-xl font-bold text-secondary">Contact Us</p>
-          <h1 className="text-3xl font-light">Stay connected with us</h1>
+          <h1 className="text-3xl font-normal">Stay connected with us</h1>
         </div>
         <div className="grid grid-cols-1 justify-items-center gap-5">
           <input

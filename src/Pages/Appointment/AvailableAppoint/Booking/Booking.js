@@ -8,13 +8,13 @@ const Booking = ({ booking, setTreatment }) => {
       {slots.length === 0 ? (
         <div
           title="Please Don't Worry. Try Another Date."
-          class="card text-neutral-content shadow-xl"
+          className="card text-neutral-content shadow-xl"
         >
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-secondary text-xl font-semibold">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title text-secondary text-xl font-semibold">
               {name}
             </h2>
-            <p className="uppercase text-sm font-light text-black">
+            <p className="uppercase text-sm font-normal text-black">
               {slots.length > 0 ? (
                 <span title="Available. Hit the Button for Booking Now.">
                   {slots[0]}
@@ -28,11 +28,11 @@ const Booking = ({ booking, setTreatment }) => {
                 </span>
               )}
             </p>
-            <p className="uppercase text-black text-xs font-light">
+            <p className="uppercase text-black text-xs font-normal">
               {slots.length < 10 ? 0 : 0}
               {slots.length} {slots.length > 1 ? "Spaces" : "Space"} Available
             </p>
-            <div class="card-actions justify-end">
+            <div className="card-actions justify-end">
               {slots.length === 0 ? (
                 <button disabled className="btn">
                   Book Appointment
@@ -46,13 +46,13 @@ const Booking = ({ booking, setTreatment }) => {
       ) : (
         <div
           title="Available. Hit the Button for Booking Now."
-          class="card text-neutral-content shadow-xl"
+          className="card text-neutral-content shadow-xl"
         >
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-secondary text-xl font-semibold">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title text-secondary text-xl font-semibold">
               {name}
             </h2>
-            <p className="uppercase text-sm font-light text-black">
+            <p className="uppercase text-sm font-normal text-black">
               {slots.length > 0 ? (
                 <span title="Available. Hit the Button for Booking Now.">
                   {slots[0]}
@@ -66,20 +66,20 @@ const Booking = ({ booking, setTreatment }) => {
                 </span>
               )}
             </p>
-            <p className="uppercase text-black text-xs font-light">
+            <p className="uppercase text-black text-xs font-normal">
               {slots.length < 10 ? 0 : 0}
               {slots.length} {slots.length > 1 ? "Spaces" : "Space"} Available
             </p>
-            <div class="card-actions justify-end">
+            <div className="card-actions justify-end">
               {slots.length === 0 ? (
                 <button disabled className="btn">
                   Book Appointment
                 </button>
               ) : (
                 <label
-                  for="booking-modal"
+                  htmlFor="booking-modal"
                   onClick={() => setTreatment(booking)}
-                  class="btn btn-secondary text-white uppercase modal-button"
+                  className="btn btn-secondary text-white uppercase modal-button"
                 >
                   Make Appointment
                 </label>

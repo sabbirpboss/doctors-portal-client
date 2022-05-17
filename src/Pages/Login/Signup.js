@@ -1,14 +1,14 @@
 import React from "react";
 import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Home/Shared/Loading";
 
-const Login = () => {
+const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
   const {
@@ -17,17 +17,17 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
-  let signInError;
+  let signUpError;
 
   if (gLoading || loading) {
     return <Loading></Loading>;
   }
 
   if (error || gError) {
-    signInError = (
+    signUpError = (
       <p className="text-red-500">
         <small>{error?.message || gError?.message}</small>
       </p>
@@ -40,16 +40,43 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    signInWithEmailAndPassword(data.email, data.password);
+    createUserWithEmailAndPassword(data.email, data.password);
   };
-
   return (
     <div className="flex justify-center items-center h-screen px-12">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body text-center">
-          <h2 className="text-xl font-normal text-black">Login</h2>
+          <h2 className="text-xl font-normal text-black">Sign Up</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control">
+              {/* name  */}
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+
+              <input
+                type="text"
+                className="input input-bordered focus:border-0"
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "Name is Required",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.name?.type === "required" && (
+                  <span className="label-text text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+                {errors.name?.type === "pattern" && (
+                  <span className="label-text text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+              </label>
+
               {/* email  */}
               <label className="label">
                 <span className="label-text">Email</span>
@@ -115,14 +142,19 @@ const Login = () => {
               </label>
             </div>
 
-            {signInError}
+            {signUpError}
             <input
               className="btn btn-accent w-full max-w-xs text-base-200 text-base font-normal"
               type="submit"
-              value="Login"
+              value="Create your Account"
             />
           </form>
-          <p className="text-xs font-normal mt-3">New to Doctors Portal? <Link className="text-secondary" to="/signup">Create New Account</Link></p>
+          <p className="text-xs font-normal mt-3">
+            Already have an account?{" "}
+            <Link className="text-secondary" to="/login">
+              Login
+            </Link>
+          </p>
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
@@ -136,4 +168,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

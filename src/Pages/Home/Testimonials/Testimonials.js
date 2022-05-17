@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="flex justify-between items-center mb-10">
         <div>
           <h4 className="text-xl text-secondary font-bold mb-1">Testimonial</h4>
-          <h2 className="text-4xl font-light">What Our Patients Says</h2>
+          <h2 className="text-4xl font-normal">What Our Patients Says</h2>
         </div>
         <div>
           <img className="w-48 sm:24 h-40" src={quote} alt="Quote" />
