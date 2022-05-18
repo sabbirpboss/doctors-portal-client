@@ -3,8 +3,8 @@ import "./App.css";
 // import Appointment from "./Pages/Appointment/Appointment";
 import Navbar from "./Pages/Home/Shared/Navbar";
 import RequireAuth from "./Pages/Login/RequireAuth";
-import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
-import { publicRoute } from "./publicRoute/publicRoute";
+import { PrivateRoute } from "./dynamicRoute/PrivateRoute/PrivateRoute";
+import { publicRoute } from "./dynamicRoute/publicRoute/publicRoute";
 
 function App() {
   return (
